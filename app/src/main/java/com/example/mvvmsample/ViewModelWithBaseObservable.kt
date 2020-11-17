@@ -3,6 +3,9 @@ package com.example.mvvmsample
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 
+// TwoWayDataBindingWithBaseObservableActivity
+// using BaseObservable
+
 class ViewModelWithBaseObservable : BaseObservable() {
     private val userDetailsModel = UserDetailsModel()
     var user: User

@@ -2,18 +2,20 @@ package com.example.mvvmsample
 
 import androidx.databinding.ObservableBoolean
 
+// MainActivity & DataBindingActivity & TwoWayDataBindingActivity
 // using ObservableBoolean
+
 class ViewModel {
     private val userDetailsModel = UserDetailsModel()
     private var user: User
-    private val remember = ObservableBoolean(false)
+    val remember = ObservableBoolean(false)
 
     init {
         user = userDetailsModel.login()
         remember.set(user.rememberMe)
     }
 
-    // MainActivity & DataBindingActivity
+
     fun getName(): String {
         return user.name
     }
