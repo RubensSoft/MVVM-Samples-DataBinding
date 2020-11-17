@@ -1,9 +1,11 @@
 # MVVM-Samples-DataBinding
 
-MainActivity --> normal, without binding
-DataBindingActivity --> one-way binding (read only) 
+## Normal, Without Binding
+MainActivity
 
-two-way binding (read and write)
+## One-Way Binding (Read only) 
+DataBindingActivity 
 
-TwoWayDataBindingActivity -->  (ViewModel using ObservableBoolean)
-TwoWayDataBindingWithBaseObservableActivity --> (ViewModel using BaseObservable)
+## Two-Way Binding (Read and Write)
+TwoWayDataBindingActivity (ViewModel using ObservableBoolean)
+TwoWayDataBindingWithBaseObservableActivity (ViewModel using BaseObservable)
