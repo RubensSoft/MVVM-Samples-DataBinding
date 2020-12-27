@@ -1,5 +1,7 @@
 # MVVM-Samples-DataBinding
 
+MVVM Design Pattern using Kotlin (Android)
+
 ### Normal, Without Binding
 MainActivity
 
