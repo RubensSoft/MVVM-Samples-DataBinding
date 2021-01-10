@@ -8,13 +8,18 @@ import com.example.mvvmsample.ViewModelWithBaseObservable
 import com.example.mvvmsample.databinding.ActivityTwoWayDataBindingWithBaseObservableBinding
 
 class TwoWayDataBindingWithBaseObservableActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityTwoWayDataBindingWithBaseObservableBinding
+    private lateinit var viewModel: ViewModelWithBaseObservable
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_two_way_data_binding_with_base_observable)
+        viewModel = ViewModelWithBaseObservable()
 
-        val binding: ActivityTwoWayDataBindingWithBaseObservableBinding = DataBindingUtil.setContentView(
-            this, R.layout.activity_two_way_data_binding_with_base_observable
-        )
+        binding.viewModel = viewModel
 
-        binding.viewmodel = ViewModelWithBaseObservable()
+        binding.button.setOnClickListener {
+            viewModel.changeRememberMe()
+        }
     }
 }

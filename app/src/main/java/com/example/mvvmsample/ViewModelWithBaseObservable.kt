@@ -1,10 +1,12 @@
 package com.example.mvvmsample
 
+import android.util.Log
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
 
 // TwoWayDataBindingWithBaseObservableActivity
 // using BaseObservable
+// https://developer.android.com/topic/libraries/data-binding/two-way?hl=es-419
 
 class ViewModelWithBaseObservable : BaseObservable() {
     private val userDetailsModel = UserDetailsModel()
@@ -20,14 +22,21 @@ class ViewModelWithBaseObservable : BaseObservable() {
     }
 
     fun setRememberMe(value: Boolean) {
-        // Avoids infinite loops.
         if (user.rememberMe != value) {
             user.rememberMe = value
+
             // React to the change.
             //saveData()
-            // Notify observers of a new value.
-            //notifyPropertyChanged()
+            Log.d("i", "user.rememberMe value is " + user.rememberMe)
+
+            notifyPropertyChanged(BR.rememberMe)
         }
     }
 
+    fun changeRememberMe() {
+        when (user.rememberMe) {
+            true -> setRememberMe(false)
+            false -> setRememberMe(true)
+        }
+    }
 }
