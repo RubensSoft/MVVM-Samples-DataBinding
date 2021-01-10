@@ -1,5 +1,6 @@
 package com.example.mvvmsample
 
+import android.util.Log
 import androidx.databinding.ObservableBoolean
 
 // MainActivity & DataBindingActivity & TwoWayDataBindingActivity
@@ -22,5 +23,19 @@ class ViewModel {
 
     fun getAge(): String {
         return user.age
+    }
+
+    fun setRememberMe() {
+        when (user.rememberMe) {
+            true -> {
+                user.rememberMe = false
+                remember.set(false)
+            }
+            false -> {
+                user.rememberMe = true
+                remember.set(true)
+            }
+        }
+        Log.d("i", "user.rememberMe value is " + user.rememberMe)
     }
 }
