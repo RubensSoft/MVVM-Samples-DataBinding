@@ -6,6 +6,9 @@ import androidx.databinding.ObservableBoolean
 // MainActivity & DataBindingActivity & TwoWayDataBindingActivity
 // using ObservableBoolean
 
+// public class ObservableBoolean
+// extends BaseObservable implements Parcelable, Serializable
+
 class ViewModel {
     private val userDetailsModel = UserDetailsModel()
     private var user: User
@@ -15,7 +18,6 @@ class ViewModel {
         user = userDetailsModel.login()
         remember.set(user.rememberMe)
     }
-
 
     fun getName(): String {
         return user.name

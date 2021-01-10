@@ -21,5 +21,9 @@ class TwoWayDataBindingActivity : AppCompatActivity() {
         binding.button.setOnClickListener {
             viewModel.setRememberMe()
         }
+
+        binding.checkBox.setOnClickListener {
+            viewModel.setRememberMe()
+        }
     }
 }
