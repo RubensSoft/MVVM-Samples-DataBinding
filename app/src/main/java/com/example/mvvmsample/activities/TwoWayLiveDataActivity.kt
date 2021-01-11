@@ -20,16 +20,12 @@ class TwoWayLiveDataActivity : AppCompatActivity() {
 
         binding.viewModel = viewModel
 
-        binding.button.setOnClickListener {
-            viewModel.changeUser()
-        }
-
-        binding.checkBox.setOnClickListener {
-            viewModel.setRememberMe()
-        }
-
         viewModel.getUserLiveData().observe(this, Observer {
             binding.viewModel = viewModel
         })
+
+        binding.button.setOnClickListener {
+            viewModel.changeUser()
+        }
     }
 }
