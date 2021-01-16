@@ -13,8 +13,7 @@ class TwoWayDataBindingWithBaseObservableActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_two_way_data_binding_with_base_observable)
-        viewModel =
-            ViewModelWithBaseObservable()
+        viewModel = ViewModelWithBaseObservable()
 
         binding.viewModel = viewModel
 

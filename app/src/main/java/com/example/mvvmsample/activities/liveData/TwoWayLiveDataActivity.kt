@@ -14,14 +14,17 @@ class TwoWayLiveDataActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_two_way_live_data)
-        viewModel =
-            TwoWayLiveDataActivityViewModel()
+        viewModel = TwoWayLiveDataActivityViewModel()
 
         binding.viewModel = viewModel
 
         viewModel.getUserLiveData().observe(this, Observer {
             binding.viewModel = viewModel
         })
+
+        binding.checkBox.setOnClickListener {
+            viewModel.setRememberMe()
+        }
 
         binding.button.setOnClickListener {
             viewModel.changeUser()

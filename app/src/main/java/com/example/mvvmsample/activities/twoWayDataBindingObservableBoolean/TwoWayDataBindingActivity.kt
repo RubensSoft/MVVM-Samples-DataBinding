@@ -14,8 +14,7 @@ class TwoWayDataBindingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_two_way_data_binding)
-        viewModel =
-            DataBindingAndTwoWayDataBindingActivityViewModel()
+        viewModel = DataBindingAndTwoWayDataBindingActivityViewModel()
 
         binding.viewModel = viewModel
 

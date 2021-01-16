@@ -13,8 +13,7 @@ class DataBindingActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_data_binding)
-        viewModel =
-            DataBindingAndTwoWayDataBindingActivityViewModel()
+        viewModel = DataBindingAndTwoWayDataBindingActivityViewModel()
         binding.viewmodel = viewModel
 
         binding.button.setOnClickListener {
