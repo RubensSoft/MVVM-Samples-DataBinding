@@ -6,13 +6,13 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.mvvmsample.TwoWayLiveDataActivityViewModel" />
+            type="com.example.mvvmsample.activities.liveData.TwoWayLiveDataActivityViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.TwoWayLiveDataActivity">
+        tools:context=".activities.liveData.TwoWayLiveDataActivity">
 
         <TextView
             android:id="@+id/textNameDataBinding"

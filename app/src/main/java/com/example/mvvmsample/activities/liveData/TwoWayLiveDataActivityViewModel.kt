@@ -1,8 +1,10 @@
-package com.example.mvvmsample
+package com.example.mvvmsample.activities.liveData
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.mvvmsample.User
+import com.example.mvvmsample.UserDetailsModel
 
 class TwoWayLiveDataActivityViewModel: ViewModel() {
     private val userDetailsModel = UserDetailsModel()

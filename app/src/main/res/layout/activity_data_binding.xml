@@ -7,13 +7,13 @@
     <data>
         <variable
             name="viewmodel"
-            type="com.example.mvvmsample.DataBindingAndTwoWayDataBindingActivityViewModel" />
+            type="com.example.mvvmsample.activities.oneWayBinding.DataBindingAndTwoWayDataBindingActivityViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".activities.DataBindingActivity">
+        tools:context=".activities.oneWayBinding.DataBindingActivity">
 
         <TextView
             android:id="@+id/textNameDataBinding"

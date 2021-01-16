@@ -1,7 +1,9 @@
-package com.example.mvvmsample
+package com.example.mvvmsample.activities.oneWayBinding
 
 import android.util.Log
 import androidx.databinding.ObservableBoolean
+import com.example.mvvmsample.User
+import com.example.mvvmsample.UserDetailsModel
 
 // DataBindingActivity & TwoWayDataBindingActivity
 // using ObservableBoolean

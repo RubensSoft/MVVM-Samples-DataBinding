@@ -1,15 +1,15 @@
-package com.example.mvvmsample.activities
+package com.example.mvvmsample.activities.withoutBinding
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
-import com.example.mvvmsample.MainActivityViewModel
 import com.example.mvvmsample.R
 
 class MainActivity : AppCompatActivity() {
-    private val viewModel = MainActivityViewModel()
+    private val viewModel =
+        MainActivityViewModel()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

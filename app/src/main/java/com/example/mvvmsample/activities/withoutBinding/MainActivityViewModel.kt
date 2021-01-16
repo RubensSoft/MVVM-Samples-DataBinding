@@ -1,7 +1,9 @@
-package com.example.mvvmsample
+package com.example.mvvmsample.activities.withoutBinding
 
 import android.util.Log
 import androidx.databinding.ObservableBoolean
+import com.example.mvvmsample.User
+import com.example.mvvmsample.UserDetailsModel
 
 class MainActivityViewModel {
     private val userDetailsModel = UserDetailsModel()

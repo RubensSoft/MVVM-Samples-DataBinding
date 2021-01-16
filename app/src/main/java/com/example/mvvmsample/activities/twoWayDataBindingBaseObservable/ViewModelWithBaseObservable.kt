@@ -1,8 +1,11 @@
-package com.example.mvvmsample
+package com.example.mvvmsample.activities.twoWayDataBindingBaseObservable
 
 import android.util.Log
 import androidx.databinding.BaseObservable
 import androidx.databinding.Bindable
+import com.example.mvvmsample.BR
+import com.example.mvvmsample.User
+import com.example.mvvmsample.UserDetailsModel
 
 // TwoWayDataBindingWithBaseObservableActivity
 // using BaseObservable
