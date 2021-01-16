@@ -3,13 +3,13 @@ package com.example.mvvmsample
 import android.util.Log
 import androidx.databinding.ObservableBoolean
 
-// MainActivity & DataBindingActivity & TwoWayDataBindingActivity
+// DataBindingActivity & TwoWayDataBindingActivity
 // using ObservableBoolean
 
 // public class ObservableBoolean
 // extends BaseObservable implements Parcelable, Serializable
 
-class ViewModel {
+class DataBindingAndTwoWayDataBindingActivityViewModel {
     private val userDetailsModel = UserDetailsModel()
     private var user: User
     val remember = ObservableBoolean(false)
@@ -39,5 +39,20 @@ class ViewModel {
             }
         }
         Log.d("i", "user.rememberMe value is " + user.rememberMe)
+    }
+
+    fun changeUser() {
+        when (user.name) {
+            "Pepito" -> user = User(
+                "Margarita",
+                "22",
+                false
+            )
+            "Margarita" -> user = User(
+                "Pepito",
+                "31",
+                true
+            )
+        }
     }
 }

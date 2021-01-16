@@ -7,7 +7,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.example.mvvmsample.ViewModel" />
+            type="com.example.mvvmsample.DataBindingAndTwoWayDataBindingActivityViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
